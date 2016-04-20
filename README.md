@@ -33,3 +33,9 @@ For example, to recover the image from the above example:
 **Programmatically**
 
 See the ```Steganogrator``` module in ```steganograte.rb``` and ```recoverate.rb```, particularly the ```steganograte``` and ```recoverate``` methods.  There is also a ```dither``` method included as a bonus (it is used in the stenography process to maintain image quality).
+
+Note: it might work with ```depth``` not as a power of 2, but that has not been tested.
+
+## Requirements
+
+Ruby and the [chunky_png](https://github.com/wvanbergen/chunky_png) gem (```gem install chunky_png```).  Has been tested with Ruby 2.2.3p173 and chunky_png 1.3.5.  Probably works okay with other combinations, just not tested with it.
