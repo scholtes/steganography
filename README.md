@@ -1,13 +1,17 @@
 # steganography
 [Wikipedia article.](https://en.wikipedia.org/wiki/Steganography)  Hide and extract images within other images.  For example, you can recover the cat from [this image.](https://en.wikipedia.org/wiki/File:Steganography_original.png)
 
+## Requirements
+
+Ruby and the [chunky_png](https://github.com/wvanbergen/chunky_png) gem (```gem install chunky_png```).  Has been tested with Ruby 2.2.3p173 and chunky_png 1.3.5.  Probably works okay with other combinations, just not tested with it.
+
 ## Usage
 
 **Console environment**
 
 To encode:
 
-```$ steganograte [HOST FILENAME] [SYMBIONT FILENAME] [OUTPUT FILENAME] [DEPTH]```
+```$ ruby steganograte.rb [HOST FILENAME] [SYMBIONT FILENAME] [OUTPUT FILENAME] [DEPTH]```
 
 `host filename` - The image that you want to hide another image in (i.e., this one will be visible)  
 `symbiont filename` - The image that you want to hide inside of another image (i.e, this one will be concealed)  
@@ -20,7 +24,7 @@ For example:
 
 To decode:
 
-```$ recoverate [INPUT FILENAME] [OUTPUT FILENAME] [DEPTH]```
+```$ ruby recoverate.rb [INPUT FILENAME] [OUTPUT FILENAME] [DEPTH]```
 
 `input filename` - The image that you wish to extract a secret image from  
 `output filename` - Where to put the output image after extraction  
@@ -35,7 +39,3 @@ For example, to recover the image from the above example:
 See the ```Steganogrator``` module in ```steganograte.rb``` and ```recoverate.rb```, particularly the ```steganograte``` and ```recoverate``` methods.  There is also a ```dither``` method included as a bonus (it is used in the stenography process to maintain image quality).
 
 Note: it might work with ```depth``` not as a power of 2, but that has not been tested.
-
-## Requirements
-
-Ruby and the [chunky_png](https://github.com/wvanbergen/chunky_png) gem (```gem install chunky_png```).  Has been tested with Ruby 2.2.3p173 and chunky_png 1.3.5.  Probably works okay with other combinations, just not tested with it.
