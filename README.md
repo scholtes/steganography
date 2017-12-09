@@ -11,7 +11,7 @@ Ruby and the [chunky_png](https://github.com/wvanbergen/chunky_png) gem (```gem 
 
 To encode:
 
-```$ ruby steganograte.rb [HOST FILENAME] [SYMBIONT FILENAME] [OUTPUT FILENAME] [DEPTH]```
+```$ ruby steganograte.rb HOST FILENAME SYMBIONT FILENAME OUTPUT FILENAME DEPTH```
 
 `host filename` - The image that you want to hide another image in (i.e., this one will be visible)  
 `symbiont filename` - The image that you want to hide inside of another image (i.e, this one will be concealed)  
@@ -24,7 +24,7 @@ For example:
 
 To decode:
 
-```$ ruby recoverate.rb [INPUT FILENAME] [OUTPUT FILENAME] [DEPTH]```
+```$ ruby recoverate.rb INPUT FILENAME OUTPUT FILENAME DEPTH```
 
 `input filename` - The image that you wish to extract a secret image from  
 `output filename` - Where to put the output image after extraction  
